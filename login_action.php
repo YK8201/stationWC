@@ -29,7 +29,7 @@ try {
         $_SESSION['username'] = $user['username'];
 
         // メインページ（index.php）にリダイレクト
-        header('Location: index.php');
+        header('Location: reviews.php');
         exit;
     } else {
         // 認証に失敗した場合
