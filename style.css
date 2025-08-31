@@ -1,0 +1,231 @@
+/* 基本設定 */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* ごく薄いグレーの背景 */
+    color: #333; /* 標準のテキスト色 */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 30px auto; /* 上下の余白を増やし、中央寄せ */
+    padding: 20px;
+    background-color: #fff; /* コンテナの背景は白 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* 軽い影 */
+    border-radius: 8px; /* 角を少し丸く */
+}
+
+h1, h2 {
+    color: #222; /* 見出しの色を濃いグレーに */
+    border-bottom: 1px solid #eee; /* 下線 */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* リンク */
+a {
+    color: #007bff; /* 青色のリンク */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* フォームセクション (投稿フォーム) */
+.form-section {
+    background-color: #f0f0f0; /* やや明るめのグレー */
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.form-section div {
+    margin-bottom: 15px; /* 各入力フィールド間の余白 */
+}
+
+.form-section label {
+    display: block; /* ラベルを独立した行に表示 */
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"],
+.form-section select,
+.form-section textarea {
+    width: calc(100% - 20px); /* 幅を調整 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
+}
+
+.checkbox-label {
+    margin-right: 20px; /* 各項目の右側に20pxの余白を追加 */
+}
+
+/* チェックボックスと文字の縦位置を揃える */
+.checkbox-label input[type="checkbox"] {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* ボタン */
+button[type="submit"] {
+    background-color: #333; /* 黒に近いグレー */
+    color: #fff; /* 白いテキスト */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+button[type="submit"]:hover {
+    background-color: #555; /* ホバーで少し明るく */
+}
+
+/* レビューカード */
+.review-card {
+    border: 1px solid #e0e0e0; /* 薄いグレーの枠線 */
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff; /* レビューカードの背景も白 */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.03); /* 軽い影 */
+}
+
+.review-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #222;
+}
+
+.review-header span {
+    float: right; /* 評価を右寄せ */
+    color: #f39c12; /* 星の色をオレンジに */
+}
+
+.review-meta {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.review-comment {
+    margin-bottom: 0;
+    color: #444;
+}
+
+.review-equipment {
+    margin-top: 15px; /* 上のコメントとの間に余白を設ける */
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0; /* 薄い区切り線 */
+}
+
+.equipment-tag {
+    display: inline-block;
+    background-color: #e9ecef; /* 背景色を薄いグレーに */
+    color: #495057; /* 文字色 */
+    padding: 4px 10px; /* タグの内側の余白 */
+    border-radius: 15px; /* 角を丸くする */
+    margin-right: 8px; /* 各タグの右側の余白 */
+    margin-bottom: 8px; /* タグが複数行になった場合の上下の余白 */
+    font-size: 0.85em; /* 文字を少し小さく */
+}
+
+/* ログイン/新規登録リンク */
+.container > p { /* 直接の子要素のpタグ（ログインしていません...の部分） */
+    margin-bottom: 20px;
+}
+
+.container > a { /* 直接の子要素のaタグ（ログイン・新規登録） */
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.container > a:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+}
+
+/* === ヘッダーのスタイル === */
+.site-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0; /* 上下の余白 */
+    width: 100%;     /* ヘッダーの背景を画面幅いっぱいに広げる */
+}
+
+.header-container {
+    width: 90%;      /* コンテンツ全体の幅を90%に設定 */
+    max-width: 1200px; /* ただし最大幅は1200pxまで */
+    margin: 0 auto;  /* 中央寄せ */
+    padding: 0 20px; /* 左右の余白 */
+    display: flex;
+    justify-content: space-between; /* ★★★ これが重要 ★★★ */
+    align-items: center;
+}
+
+/* 左ブロック: ロゴ */
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* 中央ブロック: ナビゲーション */
+.nav-center a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px; /* 「レビュー一覧」と「投稿する」の間の余白 */
+    font-size: 1.1em;
+}
+.nav-center a:hover {
+    text-decoration: underline;
+}
+
+/* 右ブロック: ユーザー情報 */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+.nav-right span,
+.nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px; /* 「挨拶」と「ログアウト」の間の余白 */
+}
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.review-actions { margin-top: 15px; }
+.like-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.like-button:hover { background-color: #e0e0e0; }
+.like-button.liked {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+.like-count { margin-left: 10px; font-weight: bold; color: #555; }
